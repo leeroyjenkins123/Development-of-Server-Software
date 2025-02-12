@@ -1,0 +1,5 @@
+Hello
+World
+22.6
+Good
+Mood3
