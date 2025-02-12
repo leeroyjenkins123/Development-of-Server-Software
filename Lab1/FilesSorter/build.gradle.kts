@@ -20,5 +20,5 @@ tasks.test {
 }
 
 application {
-    mainClass.set("org.example.Main") // Укажите путь к вашему классу с main()
+    mainClass.set("org.example.Main")
 }

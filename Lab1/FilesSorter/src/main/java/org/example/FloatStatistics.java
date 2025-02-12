@@ -27,7 +27,7 @@ public class FloatStatistics {
         return count > 0 ? max : 0.0;
     }
     public double getSum() {
-        return count > 0 ? sum : 0;
+        return count > 0 ? sum : 0.0;
     }
     public double getAverage() {
         return count > 0 ? sum / count : 0.0;
