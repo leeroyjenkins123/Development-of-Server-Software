@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!-- Добавление тестовых комментаторов -->
+    <changeSet id="insert-commentators-data" author="pxlxta">
+        <comment>Insert sample commentators data</comment>
+        <insert tableName="commentators">
+            <column name="name" value="Pasha"/>
+        </insert>
+        <insert tableName="commentators">
+            <column name="name" value="Viktor"/>
+        </insert>
+        <insert tableName="commentators">
+            <column name="name" value="Denis"/>
+        </insert>
+    </changeSet>
+
+    <!-- Добавление тестовых сервисов -->
+    <changeSet id="insert-services-data" author="pxlxta">
+        <insert tableName="services">
+            <column name="name" value="Web Development"/>
+        </insert>
+        <insert tableName="services">
+            <column name="name" value="VK"/>
+        </insert>
+        <insert tableName="services">
+            <column name="name" value="SibSutis"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

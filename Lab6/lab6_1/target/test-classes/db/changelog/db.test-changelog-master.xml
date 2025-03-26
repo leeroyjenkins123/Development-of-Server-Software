@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <include file="db/changelog/test-comments.xml"/>
+    <include file="db/changelog/test-commentators.xml"/>
+    <include file="db/changelog/test-services.xml"/>
+    <include file="db/changelog/test-comment_likes_dislikes.xml"/>
+    <include file="db/changelog/test-insert-sample-data.xml"/>
+</databaseChangeLog>
