@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <include file="db/changelog/002_create_address_table.xml"/>
+    <include file="db/changelog/001_create_customer_table.xml"/>
+    <include file="db/changelog/003_create_order_table.xml"/>
+    <include file="db/changelog/005_create_measurement_table.xml"/>
+    <include file="db/changelog/006_create_quantity_table.xml"/>
+    <include file="db/changelog/007_create_weight_table.xml"/>
+    <include file="db/changelog/008_create_item_table.xml"/>
+    <include file="db/changelog/004_create_orderdetails_table.xml"/>
+    <include file="db/changelog/009_create_payment_table.xml"/>
+    <include file="db/changelog/010_create_cash_table.xml"/>
+    <include file="db/changelog/011_create_check_table.xml"/>
+    <include file="db/changelog/012_create_credit_table.xml"/>
+
+</databaseChangeLog>
