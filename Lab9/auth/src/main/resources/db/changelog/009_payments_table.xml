@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="9" author="pxlxta">
+        <createTable tableName="payments">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="order_id" type="INT"/>
+            <column name="amount" type="FLOAT">
+                <constraints nullable="false" checkConstraint="amount >= 0"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="9.1" author="pxlxta">
+        <addForeignKeyConstraint
+                baseTableName="payments"
+                baseColumnNames="order_id"
+                constraintName="fd_payment_order"
+                referencedTableName="orders"
+                referencedColumnNames="id"
+                onDelete="CASCADE"/>
+    </changeSet>
+
+</databaseChangeLog>
