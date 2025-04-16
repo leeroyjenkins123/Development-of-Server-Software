@@ -51,20 +51,20 @@
     </changeSet>
 
     <!-- Вставка пользователей -->
-<!--    <changeSet id="4" author="pxlxta">-->
+    <changeSet id="4" author="pxlxta">
 <!--        <insert tableName="users">-->
 <!--            <column name="username" value="user1"/>-->
 <!--            <column name="password" value="password1"/>-->
 <!--            <column name="role_id" value="1"/>-->
 <!--            <column name="customer_id" value="NULL"/>-->
 <!--        </insert>-->
-<!--        <insert tableName="users">-->
-<!--            <column name="username" value="admin"/>-->
-<!--            <column name="password" value="adminpass"/>-->
-<!--            <column name="role_id" value="2"/>-->
-<!--            <column name="customer_id" value="NULL"/>-->
-<!--        </insert>-->
-<!--    </changeSet>-->
+        <insert tableName="users">
+            <column name="username" value="admin"/>
+            <column name="password" value="$2a$10$0yojPK67Qi6K/BrKW6yKmemsW/4rHcs8fXfifDoSXMYdX3beV0DhW"/>
+            <column name="role_id" value="2"/>
+            <column name="customer_id" value="NULL"/>
+        </insert>
+    </changeSet>
 
     <!-- Вставка заказов -->
     <changeSet id="5" author="pxlxta">

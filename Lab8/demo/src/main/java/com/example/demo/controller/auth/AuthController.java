@@ -5,6 +5,7 @@ import com.example.demo.dto.auth.AuthResponse;
 import com.example.demo.dto.auth.UpdateCredentialsRequest;
 import com.example.demo.entity.user.UserEntity;
 import com.example.demo.service.auth.AuthService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/auth")
 @Tag(name = "Authentication", description = "Endpoints for user authentication and management")
+@SecurityRequirement(name = "bearerAuth")
 public class AuthController {
 
     @Autowired

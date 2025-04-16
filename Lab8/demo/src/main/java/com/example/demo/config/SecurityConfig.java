@@ -35,14 +35,16 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)  // Disable CSRF for stateless authentication
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll()  // Open access to registration and login endpoints
+                        .requestMatchers("/api/auth/**","/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**", "/v3/api-docs", "/swagger-resources/**", "/swagger-resources", "/webjars/**", "/configuration/**").permitAll()  // Open access to registration and login endpoints
                         .requestMatchers(
-                                "/api/auth/**",
+//                                "/api/auth/**",
                                 // Разрешаем ВСЕ пути Swagger
                                 "/swagger-ui/**",
                                 "/swagger-ui.html",
                                 "/v3/api-docs/**",
+                                "/v3/api-docs",
                                 "/swagger-resources/**",
+                                "/swagger-resources",
                                 "/webjars/**",
                                 "/configuration/**"
                         ).permitAll()  // Require authentication for Swagger UI
