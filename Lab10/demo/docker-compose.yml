@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0.2
+    container_name: keycloak_container
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_HOSTNAME: localhost
+      KC_HOSTNAME_STRICT: "false"
+      KC_PROXY: none
+      KC_HTTP_ENABLED: "true"
+      KC_HTTP_PORT: 8080
+      KC_HTTPS_PORT: 8443
+#    volumes:
+#      - ./keycloak-realm.json:/opt/keycloak/data/import/realm.json
+    command: [ "start-dev"]
+    ports:
+      - "8081:8080"
+    networks:
+      - my_network
+
+networks:
+  my_network:

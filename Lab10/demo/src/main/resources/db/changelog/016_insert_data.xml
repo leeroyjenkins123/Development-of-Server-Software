@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <!-- Вставка ролей -->
+    <changeSet id="1" author="pxlxta">
+        <insert tableName="roles">
+            <column name="role" value="ROLE_USER"/>
+        </insert>
+        <insert tableName="roles">
+            <column name="role" value="ROLE_ADMIN"/>
+        </insert>
+    </changeSet>
+
+    <!-- Вставка адресов -->
+    <changeSet id="2" author="pxlxta">
+        <insert tableName="addresses">
+            <column name="city" value="Москва"/>
+            <column name="street" value="ул. Ленина, 10"/>
+            <column name="zipcode" value="101000"/>
+        </insert>
+        <insert tableName="addresses">
+            <column name="city" value="Санкт-Петербург"/>
+            <column name="street" value="Невский пр., 25"/>
+            <column name="zipcode" value="190000"/>
+        </insert>
+        <insert tableName="addresses">
+            <column name="city" value="Новосибирск"/>
+            <column name="street" value="ул. Достоевского, 3"/>
+            <column name="zipcode" value="190000"/>
+        </insert>
+    </changeSet>
+
+    <!-- Вставка клиентов -->
+    <changeSet id="3" author="pxlxta">
+        <insert tableName="customers">
+            <column name="name" value="Иван Иванов"/>
+            <column name="address_id" value="1"/>
+        </insert>
+        <insert tableName="customers">
+            <column name="name" value="Петр Петров"/>
+            <column name="address_id" value="2"/>
+        </insert>
+        <insert tableName="customers">
+            <column name="name" value="Игорь Петров"/>
+            <column name="address_id" value="3"/>
+        </insert>
+    </changeSet>
+
+    <!-- Вставка пользователей -->
+    <changeSet id="4" author="pxlxta">
+<!--        <insert tableName="users">-->
+<!--            <column name="username" value="user1"/>-->
+<!--            <column name="password" value="password1"/>-->
+<!--            <column name="role_id" value="1"/>-->
+<!--            <column name="customer_id" value="NULL"/>-->
+<!--        </insert>-->
+        <insert tableName="users">
+            <column name="username" value="admin"/>
+            <column name="password" value="$2a$10$0yojPK67Qi6K/BrKW6yKmemsW/4rHcs8fXfifDoSXMYdX3beV0DhW"/>
+            <column name="role_id" value="2"/>
+            <column name="customer_id" value="NULL"/>
+        </insert>
+    </changeSet>
+
+    <!-- Вставка заказов -->
+    <changeSet id="5" author="pxlxta">
+        <insert tableName="orders">
+            <column name="customer_id" value="1"/>
+            <column name="date" value="2023-01-15 10:00:00"/>
+            <column name="status" value="Новый"/>
+        </insert>
+        <insert tableName="orders">
+            <column name="customer_id" value="2"/>
+            <column name="date" value="2023-01-16 11:30:00"/>
+            <column name="status" value="В обработке"/>
+        </insert>
+        <insert tableName="orders">
+            <column name="customer_id" value="3"/>
+            <column name="date" value="2023-01-17 11:30:00"/>
+            <column name="status" value="В обработке"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
