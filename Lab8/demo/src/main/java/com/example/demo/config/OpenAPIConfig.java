@@ -29,7 +29,7 @@ public class OpenAPIConfig {
                         .description("Документация к API"))
                 .components(new Components()
                         .addSecuritySchemes("bearerAuth",
-                                new io.swagger.v3.oas.models.security.SecurityScheme() // 👈 полностью квалифицированное имя
+                                new io.swagger.v3.oas.models.security.SecurityScheme()
                                         .type(io.swagger.v3.oas.models.security.SecurityScheme.Type.HTTP)
                                         .scheme("bearer")
                                         .bearerFormat("JWT")

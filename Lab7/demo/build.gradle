@@ -36,7 +36,7 @@ dependencies {
 	implementation 'org.springdoc:springdoc-openapi-starter-common:2.3.0'   // Для OpenAPI
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	testImplementation 'org.testcontainers:testcontainers:1.19.7'
-	testImplementation 'org.testcontainers:postgresql:1.19.7'
+	testImplementation 'org.testcontainers:postgresql'
 	testImplementation 'org.testcontainers:junit-jupiter:1.19.7'
 }
 
